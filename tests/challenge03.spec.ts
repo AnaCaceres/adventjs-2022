@@ -16,4 +16,12 @@ describe("Challenge #3: How many packs of gifts can Santa carry?", () => {
 
     expect(distributedGifts).toBe(2);
   });
+
+  it("should return 1 maximum packs can be delivered", () => {
+    const packOfGifts: string[] = ["book", "doll", "ball", "computer"];
+    const reindeers: string[] = ["dasher", "dancer"];
+    const distributedGifts: number = distributeGifts(packOfGifts, reindeers);
+
+    expect(distributedGifts).toBe(1);
+  });
 });

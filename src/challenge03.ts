@@ -2,7 +2,7 @@ export default function distributeGifts(packOfGifts: string[], reindeers: string
   const reindeersLoad: number = calculateMaxReindeersLoad(reindeers);
   const packOfGiftsLoad: number =calculatePackOfGiftsLoad(packOfGifts);
 
-  return reindeersLoad / packOfGiftsLoad;
+  return Math.floor(reindeersLoad / packOfGiftsLoad);
 }
 
 function calculateMaxReindeersLoad(reindeers: string[]) {
