@@ -7,12 +7,13 @@ type Box = {
 export default function fitsInOneBox(boxes: Box[]) {
   let doesBoxesFitInOneBox: boolean = true;
   let boxMeasurementDefinition: (keyof typeof boxes[0])[] = (Object.keys(boxes[0]) as (keyof typeof boxes[0])[]);
+  let firstBox: Box = boxes.shift() || boxes[0];
   boxes.reduce((previousBox, box) => {
     boxMeasurementDefinition.forEach((measurement) => {
-      doesBoxesFitInOneBox = previousBox[measurement] < box[measurement];
+      if (doesBoxesFitInOneBox) doesBoxesFitInOneBox = previousBox[measurement] < box[measurement];
     });
     return box; 
-  }, boxes[0]);
+  }, firstBox);
 
   return doesBoxesFitInOneBox;
 }

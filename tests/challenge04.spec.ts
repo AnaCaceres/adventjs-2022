@@ -18,4 +18,14 @@ describe("Challenge #4: Box inside a box and another...", () => {
 
     expect(fitsInOneBox(boxes)).toBe(true);
   });
+
+  it("should return false for boxes with incorrect size", () => {
+    const boxes = [
+      { l: 1, w: 1, h: 1 },
+      { l: 2, w: 2, h: 2 },
+      { l: 3, w: 1, h: 3 }
+    ]
+
+    expect(fitsInOneBox(boxes)).toBe(false);
+  });
 });
