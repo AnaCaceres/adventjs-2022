@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1670964405968" clover="3.2.0">
-  <project timestamp="1670964405968" name="All files">
-    <metrics statements="74" coveredstatements="74" conditionals="23" coveredconditionals="22" methods="8" coveredmethods="8" elements="105" coveredelements="104" complexity="0" loc="74" ncloc="74" packages="1" files="4" classes="4"/>
+<coverage generated="1670964912070" clover="3.2.0">
+  <project timestamp="1670964912070" name="All files">
+    <metrics statements="75" coveredstatements="75" conditionals="26" coveredconditionals="25" methods="8" coveredmethods="8" elements="109" coveredelements="108" complexity="0" loc="75" ncloc="75" packages="1" files="4" classes="4"/>
     <file name="challenge01.ts" path="/Users/anacaceres/Repos/adventjs-2022/src/challenge01.ts">
       <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <line num="1" count="3" type="cond" truecount="1" falsecount="0"/>
@@ -67,26 +67,27 @@
       <line num="10" count="4" type="stmt"/>
     </file>
     <file name="challenge04.ts" path="/Users/anacaceres/Repos/adventjs-2022/src/challenge04.ts">
-      <metrics statements="19" coveredstatements="19" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="7" count="3" type="cond" truecount="1" falsecount="0"/>
-      <line num="8" count="3" type="stmt"/>
-      <line num="9" count="3" type="stmt"/>
-      <line num="10" count="3" type="cond" truecount="0" falsecount="1"/>
-      <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
-      <line num="12" count="4" type="cond" truecount="1" falsecount="0"/>
-      <line num="13" count="12" type="cond" truecount="1" falsecount="0"/>
-      <line num="14" count="4" type="stmt"/>
-      <line num="15" count="4" type="stmt"/>
-      <line num="16" count="3" type="stmt"/>
-      <line num="17" count="3" type="stmt"/>
-      <line num="18" count="3" type="stmt"/>
-      <line num="19" count="3" type="stmt"/>
+      <line num="7" count="5" type="cond" truecount="1" falsecount="0"/>
+      <line num="8" count="5" type="stmt"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="11" count="5" type="cond" truecount="0" falsecount="1"/>
+      <line num="12" count="5" type="cond" truecount="1" falsecount="0"/>
+      <line num="13" count="8" type="cond" truecount="1" falsecount="0"/>
+      <line num="14" count="24" type="cond" truecount="1" falsecount="0"/>
+      <line num="15" count="8" type="stmt"/>
+      <line num="16" count="8" type="stmt"/>
+      <line num="17" count="5" type="stmt"/>
+      <line num="18" count="5" type="stmt"/>
+      <line num="19" count="5" type="stmt"/>
+      <line num="20" count="5" type="stmt"/>
     </file>
   </project>
 </coverage>
