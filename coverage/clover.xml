@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1670833294355" clover="3.2.0">
-  <project timestamp="1670833294355" name="All files">
-    <metrics statements="45" coveredstatements="45" conditionals="15" coveredconditionals="15" methods="6" coveredmethods="6" elements="66" coveredelements="66" complexity="0" loc="45" ncloc="45" packages="1" files="2" classes="2"/>
+<coverage generated="1670959181027" clover="3.2.0">
+  <project timestamp="1670959181027" name="All files">
+    <metrics statements="48" coveredstatements="48" conditionals="16" coveredconditionals="16" methods="7" coveredmethods="7" elements="71" coveredelements="71" complexity="0" loc="48" ncloc="48" packages="1" files="3" classes="3"/>
     <file name="challenge01.ts" path="/Users/anacaceres/Repos/adventjs-2022/src/challenge01.ts">
       <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <line num="1" count="3" type="cond" truecount="1" falsecount="0"/>
@@ -52,6 +52,12 @@
       <line num="31" count="13" type="stmt"/>
       <line num="32" count="13" type="stmt"/>
       <line num="33" count="13" type="stmt"/>
+    </file>
+    <file name="challenge03.ts" path="/Users/anacaceres/Repos/adventjs-2022/src/challenge03.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
