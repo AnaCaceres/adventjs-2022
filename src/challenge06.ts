@@ -3,21 +3,25 @@ export default function createCube(size: number) {
   const underscore = '\_';
   const invertedSlash = '\\';
 
-  if (size === 1) {
-    return '\/\\\_\\\n'+'\\\/\_\/'
+  const front = '\_\\'.repeat(size);
+  const down = '\_\/'.repeat(size);
+
+  let result = ''
+
+  for (let i = 0; i < size; i ++) {
+    const numberOfSpaces = size - i - 1;
+    result += ' '.repeat(numberOfSpaces) + '\/\\'.repeat(i + 1) + front + '\n';
   }
 
-  if (size === 2) {
-    return ' \/\\\_\\\_\\\n' + '\/\\\/\\\_\\\_\\\n' + '\\\/\\\/\_\/\_\/\n' + ' \\\/\_\/\_\/';
+  for (let i = size; i > 0; i --) {
+    const numberOfSpaces = size - i;
+    result += ' '.repeat(numberOfSpaces) + '\\\/'.repeat(i) + down;
+    if (i != 1) {
+      result += '\n';
+    }
   }
 
-  if (size === 3) {
-    return '  \/\\\_\\\_\\\_\\\n' + 
-            ' \/\\\/\\\_\\\_\\\_\\\n' + 
-            '\/\\\/\\\/\\\_\\\_\\\_\\\n' +
-            '\\\/\\\/\\\/\_\/\_\/\_\/\n' +
-            ' \\\/\\\/\_\/\_\/\_\/\n' +
-            '  \\\/\_\/\_\/\_\/'
-  }
-  return '';
+  console.log(result);
+
+  return result;
 }
