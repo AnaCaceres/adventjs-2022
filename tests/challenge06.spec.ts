@@ -14,7 +14,8 @@ describe("Challenge #6: Creating xmas decorations",() => {
 
     const cube = createCube(cubeSize);
 
-    expect(cube).toBe('\/\\\_\\\n'+'\\\/\_\/');
+    expect(cube).toBe('\/\\\_\\\n' + 
+                      '\\\/\_\/');
   });
 
   it("should return two dimension cube for size 2", () => {
@@ -22,20 +23,16 @@ describe("Challenge #6: Creating xmas decorations",() => {
 
     const cube = createCube(cubeSize);
 
-    expect(cube).toBe(' \/\\\_\\\_\\\n' + '\/\\\/\\\_\\\_\\\n' + '\\\/\\\/\_\/\_\/\n' + ' \\\/\_\/\_\/');
+    expect(cube).toBe(' \/\\\_\\\_\\\n' + 
+                      '\/\\\/\\\_\\\_\\\n' + 
+                      '\\\/\\\/\_\/\_\/\n' + 
+                      ' \\\/\_\/\_\/');
   });
 
   it("should return three dimension cube for size 3", () => {
     const cubeSize = 3;
 
     const cube = createCube(cubeSize);
-
-    console.log('  \/\\\_\\\_\\\_\\\n' + 
-    ' \/\\\/\\\_\\\_\\\_\\\n' + 
-    '\/\\\/\\\/\\\_\\\_\\\_\\\n' +
-    '\\\/\\\/\\\/\_\/\_\/\_\/\n' +
-    ' \\\/\\\/\_\/\_\/\_\/\n' +
-    '  \\\/\_\/\_\/\_\/')
 
     expect(cube).toBe('  \/\\\_\\\_\\\_\\\n' + 
                       ' \/\\\/\\\_\\\_\\\_\\\n' + 
