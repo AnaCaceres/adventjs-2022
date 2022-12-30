@@ -16,4 +16,8 @@ describe("Challenge #8: We need a mechanic!",() => {
   it("should return false for 'midu'", () => {
     expect(checkPart("midu")).toBe(false);
   });
+
+  it("should return true for 'Mam'", () => {
+    expect(checkPart("Mam")).toBe(true);
+  });
 });
