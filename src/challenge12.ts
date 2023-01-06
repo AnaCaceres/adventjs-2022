@@ -5,10 +5,14 @@ type Sleigh = {
 
 export default function selectSleigh(distance: number, sleighs: Sleigh[]) {
   const totalBattery = 20;
+  let bestSleigh = null;
 
-  let bestSleigh = sleighs.reverse().find((sleigh) => {
-    return sleigh.consumption * distance <= totalBattery;
+  sleighs.reverse().find((sleigh) => {
+    const isSleighCapable = sleigh.consumption * distance <= totalBattery;
+    if (isSleighCapable) bestSleigh = sleigh.name;
+
+    return isSleighCapable;
   });
 
-  return bestSleigh?.name || null;
+  return bestSleigh;
 }
