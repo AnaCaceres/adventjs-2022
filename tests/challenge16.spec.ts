@@ -26,4 +26,9 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
     const letter = "Hello Santa.I've been good this year.";
     expect(fixLetter(letter)).toBe("Hello Santa. I've been good this year.");
   });
+
+  it("should remove spaces before comma or point", () => {
+    const letter = "I'm a girl from Barcelona , Spain .";
+    expect(fixLetter(letter)).toBe("I'm a girl from Barcelona, Spain.");
+  });
 });

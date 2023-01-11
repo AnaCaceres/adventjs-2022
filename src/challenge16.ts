@@ -9,6 +9,11 @@ export default function fixLetter(letter: string) {
         character !== " "
       ) {
         return (formattedLetter += ` ${character}`);
+      } else if (
+        formattedLetter.slice(-1) === " " &&
+        [",", "."].includes(character)
+      ) {
+        return formattedLetter.slice(0, -1) + character;
       }
       return (formattedLetter += character);
     }, "");
