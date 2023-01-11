@@ -1,10 +1,11 @@
 export default function fixLetter(letter: string) {
   letter = letter.trim();
+  letter = letter.charAt(0).toUpperCase() + letter.slice(1);
   let correctedLetter = letter
     .split("")
     .reduce((formattedLetter: string, character: string) => {
       if (
-        [". ", "? "].includes(formattedLetter.slice(-2)) &&
+        [". ", "? ", "! "].includes(formattedLetter.slice(-2)) &&
         character !== character.toUpperCase()
       ) {
         return (formattedLetter += character.toUpperCase());
@@ -15,10 +16,16 @@ export default function fixLetter(letter: string) {
       ) {
         return formattedLetter;
       }
-      if ([",", "."].includes(formattedLetter.slice(-1)) && character !== " ") {
+      if (
+        [",", ".", "?", "!"].includes(formattedLetter.slice(-1)) &&
+        character !== " "
+      ) {
         return (formattedLetter += ` ${character}`);
       }
-      if (formattedLetter.slice(-1) === " " && [",", "."].includes(character)) {
+      if (
+        formattedLetter.slice(-1) === " " &&
+        [",", ".", "?", "!"].includes(character)
+      ) {
         return formattedLetter.slice(0, -1) + character;
       }
       return (formattedLetter += character);
@@ -29,7 +36,9 @@ export default function fixLetter(letter: string) {
     "Santa Claus"
   );
 
-  correctedLetter += [".", "?"].includes(correctedLetter.slice(-1)) ? "" : ".";
+  correctedLetter += [".", "?", "!"].includes(correctedLetter.slice(-1))
+    ? ""
+    : ".";
 
   return correctedLetter;
 }
