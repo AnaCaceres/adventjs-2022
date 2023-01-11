@@ -36,4 +36,11 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
     const letter = "Hello, how are you??";
     expect(fixLetter(letter)).toBe("Hello, how are you?");
   });
+
+  it("should have the first letter of each sentence capitalized", () => {
+    const letter = "Hello Santa Claus. please, send me a bike.";
+    expect(fixLetter(letter)).toBe(
+      "Hello Santa Claus. Please, send me a bike."
+    );
+  });
 });
