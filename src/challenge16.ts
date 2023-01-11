@@ -1,12 +1,17 @@
 export default function fixLetter(letter: string) {
-  const letterWithCorrectedSpaces = letter
+  const correctedLetter = letter
     .split("")
-    .reduce((correctedLetter: string, character: string) => {
-      if (correctedLetter.slice(-1) === " " && character === " ") {
-        return correctedLetter;
+    .reduce((formattedLetter: string, character: string) => {
+      if (formattedLetter.slice(-1) === " " && character === " ") {
+        return formattedLetter;
+      } else if (
+        [",", "."].includes(formattedLetter.slice(-1)) &&
+        character !== " "
+      ) {
+        return (formattedLetter += ` ${character}`);
       }
-      return (correctedLetter += character);
+      return (formattedLetter += character);
     }, "");
 
-  return letterWithCorrectedSpaces.trim();
+  return correctedLetter.trim();
 }

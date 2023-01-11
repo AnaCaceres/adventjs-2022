@@ -16,4 +16,14 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
     const letter = "Hello,  how are you?";
     expect(fixLetter(letter)).toBe("Hello, how are you?");
   });
+
+  it("should leave a space after each comma", () => {
+    const letter = "Hello,how are you?";
+    expect(fixLetter(letter)).toBe("Hello, how are you?");
+  });
+
+  it("should leave a space after each point", () => {
+    const letter = "Hello Santa.I've been good this year.";
+    expect(fixLetter(letter)).toBe("Hello Santa. I've been good this year.");
+  });
 });
