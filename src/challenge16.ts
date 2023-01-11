@@ -1,3 +1,3 @@
 export default function fixLetter(letter: string) {
-  return letter;
+  return letter.trim();
 }
