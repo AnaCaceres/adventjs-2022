@@ -1,9 +1,10 @@
 export default function fixLetter(letter: string) {
-  const correctedLetter = letter
+  letter = letter.trim();
+  let correctedLetter = letter
     .split("")
     .reduce((formattedLetter: string, character: string) => {
       if (
-        formattedLetter.slice(-2) === ". " &&
+        [". ", "? "].includes(formattedLetter.slice(-2)) &&
         character !== character.toUpperCase()
       ) {
         return (formattedLetter += character.toUpperCase());
@@ -23,5 +24,12 @@ export default function fixLetter(letter: string) {
       return (formattedLetter += character);
     }, "");
 
-  return correctedLetter.trim();
+  correctedLetter = correctedLetter.replace(
+    /[sS]anta [cC]laus/g,
+    "Santa Claus"
+  );
+
+  correctedLetter += [".", "?"].includes(correctedLetter.slice(-1)) ? "" : ".";
+
+  return correctedLetter;
 }

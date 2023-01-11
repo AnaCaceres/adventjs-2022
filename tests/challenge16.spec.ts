@@ -9,7 +9,7 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
 
   it("should remove spaces at the beginning and at the end", () => {
     const letter = " Hello ";
-    expect(fixLetter(letter)).toBe("Hello");
+    expect(fixLetter(letter)).toBe("Hello.");
   });
 
   it("should remove multiple spaces and leave only one", () => {
@@ -39,6 +39,20 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
 
   it("should have the first letter of each sentence capitalized", () => {
     const letter = "Hello Santa Claus. please, send me a bike.";
+    expect(fixLetter(letter)).toBe(
+      "Hello Santa Claus. Please, send me a bike."
+    );
+  });
+
+  it("should have the word 'Santa Claus' in uppercase", () => {
+    const letter = "Hello santa claus. Please, send me a bike.";
+    expect(fixLetter(letter)).toBe(
+      "Hello Santa Claus. Please, send me a bike."
+    );
+  });
+
+  it("should have a point at the end of the sentence", () => {
+    const letter = "Hello Santa Claus. Please, send me a bike";
     expect(fixLetter(letter)).toBe(
       "Hello Santa Claus. Please, send me a bike."
     );
