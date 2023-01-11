@@ -11,4 +11,9 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
     const letter = " Hello ";
     expect(fixLetter(letter)).toBe("Hello");
   });
+
+  it("should remove multiple spaces and leave only one", () => {
+    const letter = "Hello,  how are you?";
+    expect(fixLetter(letter)).toBe("Hello, how are you?");
+  });
 });
