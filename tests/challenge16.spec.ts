@@ -31,4 +31,9 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
     const letter = "I'm a girl from Barcelona , Spain .";
     expect(fixLetter(letter)).toBe("I'm a girl from Barcelona, Spain.");
   });
+
+  it("should remove multiple question marks", () => {
+    const letter = "Hello, how are you??";
+    expect(fixLetter(letter)).toBe("Hello, how are you?");
+  });
 });
