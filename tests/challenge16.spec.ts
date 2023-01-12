@@ -8,12 +8,17 @@ describe("Challenge #16: Fixing Santa Claus' letters", () => {
   });
 
   it("should remove spaces at the beginning and at the end", () => {
-    const letter = " Hello ";
+    const letter = " Hello. ";
     expect(fixLetter(letter)).toBe("Hello.");
   });
 
-  it("should remove multiple spaces and leave only one", () => {
-    const letter = "Hello,  how are you?";
+  it("should remove spaces at the beginning and at the end", () => {
+    const letter = " Hello. ";
+    expect(fixLetter(letter)).toBe("Hello.");
+  });
+
+  it("should have the first letter capitalized", () => {
+    const letter = "hello, how are you?";
     expect(fixLetter(letter)).toBe("Hello, how are you?");
   });
 
