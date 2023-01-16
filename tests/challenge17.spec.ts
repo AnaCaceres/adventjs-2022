@@ -12,4 +12,26 @@ describe("Challenge #17: Carrying gift bags", () => {
     let maxWeight: number = 10;
     expect(carryGifts(gifts, maxWeight)).toEqual(["game bike", "book toy"]);
   });
+
+  it("should return 4 bags", () => {
+    let gifts: string[] = ["game", "bike", "book", "toy"];
+    let maxWeight: number = 4;
+    expect(carryGifts(gifts, maxWeight)).toEqual([
+      "game",
+      "bike",
+      "book",
+      "toy",
+    ]);
+  });
+
+  it("should return 4 bags", () => {
+    let gifts: string[] = ["toy", "gamme", "toy", "bike"];
+    let maxWeight: number = 6;
+    expect(carryGifts(gifts, maxWeight)).toEqual([
+      "toy",
+      "gamme",
+      "toy",
+      "bike",
+    ]);
+  });
 });
